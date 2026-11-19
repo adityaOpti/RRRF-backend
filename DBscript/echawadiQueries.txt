@@ -1,0 +1,111 @@
+---of linkage db
+-- select sch_name from mhror_master.m_taluka_census 
+-- where 
+-- sch_name like '%mhror%'
+-- not in('mhrorgad_ahe','mhrorwar_ash','mhrornas_yev','mhrorosm_kal','mhrornag_kuh','mhrorpun_mav','mhrorsan_kav','mhrorgon_gon','mhrorahm_kop','mhrornas_tri','mhrornag_par','mhrornas_nip','mhrorbul_she','mhrorhin_kal','mhrorkol_gag','mhrorkol_cha','mhrorkol_shi','mhrorgad_kor','mhrorrai_mah','mhrorcha_jiv','mhroraur_phu','mhrorahm_kar','mhrorbee_shi','mhrorbee_dha','mhrorsat_kar','mhrorbul_meh','mhrorsan_jat','mhrorpun_amb','mhroryav_kel','mhrorbha_lakn','mhrorsat_sat','mhrornas_nas','mhrorrai_pan','mhrorjag_bod','mhrorrai_kha','mhrorako_pat','mhrorrai_mur','mhrorhin_aun','mhroramr_dha','mhrorako_ako','mhrorrai_shr','mhrornan_kin','mhrorjag_jam','mhrorwar_arv','mhrorahm_rah','mhrorwar_sel','mhrorahm_ako','mhroraur_vai','mhroryav_gha','mhrorbul_jal','mhrorjag_yav','mhrorjag_bhu','mhrorlat_jal','mhrorrat_ked','mhrorkol_bhu','mhrorsan_tas','mhrorgad_eta','mhrorahm_shr','mhrornag_ram','mhrorpal_pal','mhrorsol_man','mhroramr_war','mhrorpun_vel','mhrorjag_jai','mhrorahm_pat','mhrornas_pet','mhrornag_urb','mhrorwas_ris','mhrorbul_mot','mhrorpun_pun','mhrordhu_sak','mhrorsin_mal','mhrorosm_was','mhrornas_bag','mhrorlat_cha','mhroryav_dig','mhrorrai_man','mhrorsin_dev','mhrorpun_ind','mhrorahm_nev','mhrornag_nar','mhrorgad_arm','mhrorpun_pur','mhrorwar_deo','mhrorpun_mul','mhrornan_deg','mhrorbee_maj','mhroramr_dhm','mhroramr_ach','mhrorsin_kud','mhrorjag_cha','mhroryav_zar','mhrorrat_rat','mhrortha_amb','mhroraur_kan','mhrorhin_hin','mhrormsd_bor','mhrorsat_wai','mhrortha_tha','mhrornan_nan','mhrornag_rul','mhrorjag_era','mhrornad_shd','mhrorkol_kar','mhrorsin_vai','mhroryav_bab','mhroryav_ner','mhrorjal_gha','mhrorjal_jaf','mhrorcha_raj','mhrorsol_kar','mhrorrat_chp','mhrorwas_was','mhrornag_mau','mhrorrai_pol','mhrorgon_deo','mhroryav_yav','mhrorcha_nag','mhrorkol_aja','mhrorjag_cho','mhrorrat_man','mhroramr_chr','mhrorpal_wad','mhrorbul_deu','mhrorahm_san','mhroryav_dar','mhrortha_ulh','mhrorbee_ash','mhrorgon_gor','mhrornan_mud','mhrorrat_raj','mhrorbha_pau','mhrornas_kal','mhrorbee_kej','mhrorwar_sam','mhrornad_nav','mhrorahm_jam','mhrornas_mal','mhrorbha_bha','mhrorsan_pal','mhroryav_ral','mhrorcha_gon','mhrorahm_par','mhrorbha_sako','mhrorrai_ura','mhrorahm_she','mhrortha_sha','mhrorako_bar','mhrorkol_hat','mhrorwar_hin','mhrorkol_gad','mhrorsol_pan','mhrorjal_man','mhroryav_mah','mhroraur_khu','mhrorgon_mor','mhrorgad_sir','mhroraur_soe','mhrorcha_bal','mhrorcha_war','mhrorsol_sou','mhrorsol_akk','mhrorjal_jal','mhrornas_dev','mhrorsol_moh','mhroramr_chb','mhrorrai_mha','mhrorsol_nor','mhrorrat_lan','mhrorbee_gev','mhrorbul_kha','mhrorgad_kur','mhrordhu_dhu','mhrorjag_par','mhrorlat_lat','mhroramr_chi','mhrorlat_deo','mhrorcha_mul','mhrorosm_loh','mhrorkol_pan','mhrorsol_san','mhrornad_akl','mhrorrai_tal','mhrorsin_kan','mhrorrat_dap','mhrortha_kal','mhrorbul_bul','mhrorgon_amg','mhrorsan_mir','mhrorbul_sin','mhrorpal_vik','mhrorosm_tul','mhroraur_gan','mhrorosm_par','mhrorgad_wad','mhrorgon_sal','mhrordhu_shk','mhrorrai_sud','mhrorrai_roh','mhrornag_umr','mhrortha','mhrorjal_bad','mhrornag_hin','mhrorgon_sad','mhrorcha_kor','mhrorrat_sag','mhrorlat_aus','mhrorgad_gad','mhrornas_nan','mhrorcha_pom','mhrorgad_bha','mhrorsol_bar','mhrorlat_shi','mhrornas_cha','mhrorsin_dod','mhrorpun_hav','mhrorosm_ome','mhrorwas_kar','mhrorbul_lon','mhrorcha_War','mhrorpun_khe','mhrorrai_ali','mhrornag_bhi','mhrorpal_jaw','mhrorwas_man','mhroramr_War','mhroraur_pai','mhrornas_sin','mhrordhu_shi','mhrorwar_war','mhrorgad_cha','mhrornan_dha','mhrorbee_vad','mhrorlat_nil','mhrornad_nad','mhrorpun_bho','mhrorsat_man','mhrorsan_kha','mhroryav_pus','mhrorpal_tal','mhrorsat_kor','mhrorbul_mal','mhrornan_had','mhrorahm_rat','mhrorpar_pal','mhrorpar_sel','mhrorsat_pha','mhrorpal_mok','mhrorjal_par','mhrorako_akt','mhrorgon_tir','mhrorgad_mul','mhrorjag_dha','mhroraur_sil','mhrorbul_chi','mhrorsat_mah','mhrorcha_sin','mhrorako_bal','mhrorpar_pur','mhrornad_tal','mhrorhin_bas','mhrorsan_kad','mhrorgad_dha','mhrorlat_udg','mhrorbee_par','mhrorpar_pat','mhrorwas_mng','mhrorcha_bra','mhrorhin_sen','mhrorsat_pat','mhrornas_sur','mhrornag_kat','mhrortha_mur','mhrorahm_nag','mhrorbha_moh','mhrorjag_pac','mhrorako_tel','mhrorkol_kag','mhrorosm_osm','mhroryav_mar','mhrorcha_chi','mhrorpar_gan','mhrorbha_tum','mhrorkol_sha','mhrorbha_lakh','mhroryav_arn','mhrornas_din','mhrorsan_shi','mhroryav_wan','mhrorjag_ama','mhroramr_nan','mhrorwas_mal','mhroramr_mor','mhrorosm_bho','mhroramr_dar','mhrorcha_sao','mhrornag_sav','mhroramr_bha','mhroramr_amr','mhrornas_iga','mhrorbee_bee','mhrorjag_bha','mhrorjal_bho','mhrorsol_mad','mhrorsin_saw','mhrorkol_rad','mhrorpun_jun','mhrorpun_dau','mhrorrat_guh','mhrorpun_bar','mhrornag_kal','mhroramr_anj','mhrorwar_kar','mhrorjag_rav','mhrorpal_dah','mhroryav_uma','mhrorsat_jav','mhrorsin_ven','mhrorpar_man','mhrorako_mur','mhrorcha_bha','mhrorjag_jal','mhrorlat_ren','mhrorpar_son','mhrorjal_amb','mhrorsol_mal','mhrorjag_muk','mhrortha_bhi','mhrorbee_amb','mhrorpar_jin','mhrormsd_and','mhrorpal_vas','mhroryav_kal','mhrorrai_kar','mhrorbul_san','mhrorrai_pen','mhrorbee_pat','mhrormsd_kur','mhrorsan_atp','mhrorpar_par','mhrorcha_cha','mhroraur_aur','mhroramr_tio','mhrorahm_shg','mhrornad_akr','mhrorlat_ahm','mhrorsan_wal','mhrornag_kam','mhrorpun_shi')
+
+
+
+select * from m_village_mapper where lower(m_village_mapper.ech_schema_name)='echaur_kan'
+update m_village_mapper set ech_schema_name='echamr_war' where m_village_mapper.ech_schema_name='echamr_War'
+
+
+
+select distinct on(ech_schema_name) * from m_village_mapper 
+where m_village_mapper.ech_host is null
+order by ech_db_name
+
+select *   from m_village_mapper where m_village_mapper.ech_schema_name='echpar_gan'
+delete from m_village_mapper where ccode='273300030412220001'
+
+order by  ech_schema_name
+
+update m_village_mapper set ech_schema_name='echtha_tha' where m_village_mapper.ech_schema_name='echtha'
+
+
+update m_village_mapper set ech_host='10.10.248.140' where ech_db_name in
+('echtha','echmsd','echrai','echrat','echsin','echpal',
+ 'echbee','echlat','echpar','echaur','echosm','echjal','echnan','echhin'
+)
+
+update m_village_mapper set ech_host='10.10.248.194' where ech_db_name in
+('echnag','echcha','echgad','echwar','echgon','echbha','echnas','echdhu','echnad','echjag','echahm')
+
+update m_village_mapper set ech_host='10.10.248.195' where ech_db_name in
+('echamr','echyav','echbul','echako','echwas','echsol','echsat','echsan','echkol','echpun')
+
+
+update m_village_mapper set ech_host='10.10.248.195' where ech_schema_name='echpun_pun';
+insert into m_village_mapper values('','mhrorsat','','mhrorsat_kht','','','','','10.10.248.195','echsat','echsat_kht');
+insert into m_village_mapper values('','mhrornan','','mhrornan_bil','','','','','10.10.248.140','echnan','echnan_bil');
+insert into m_village_mapper values('','mhrornan','','mhrornan_nai','','','','','10.10.248.140','echnan','echnan_nai');
+insert into m_village_mapper values('','mhrornan','','mhrornan_ard','','','','','10.10.248.140','echnan','echnan_ard');
+insert into m_village_mapper values('','mhrorbul','','mhrorbul_nan','','','','','10.10.248.195','echbul','echbul_nan');
+insert into m_village_mapper values('','mhrornan','','mhrornan_bho','','','','','10.10.248.140','echnan','echnan_bho');
+insert into m_village_mapper values('','mhrornan','','mhrornan_mah','','','','','10.10.248.140','echnan','echnan_mah');
+insert into m_village_mapper values('','mhrornan','','mhrornan_umr','','','','','10.10.248.140','echnan','echnan_umr');
+insert into m_village_mapper values('','mhrornan','','mhrornan_kan','','','','','10.10.248.140','echnan','echnan_kan');
+insert into m_village_mapper values('','mhrornan','','mhrornan_hmy','','','','','10.10.248.140','echnan','echnan_hmy');
+insert into m_village_mapper values('','mhrornan','','mhrornan_muk','','','','','10.10.248.140','echnan','echnan_muk');
+insert into m_village_mapper values('','mhrornan','','mhrornan_loh','','','','','10.10.248.140','echnan','echnan_loh');
+insert into m_village_mapper values('','mhrorsat','','mhrorsat_khn','','','','','10.10.248.195','echsat','echsat_khn');
+
+insert into m_village_mapper values('','mhroramr','','mhroramr_war','','','','','10.10.248.194','echamr','echamr_war');
+insert into m_village_mapper values('','mhrorosm','','mhrorosm_was','','','','','10.10.248.140','echosm','echosm_was');
+insert into m_village_mapper values('','mhrorrai','','mhrorrai_mah','','','','','10.10.248.140','echrai','echrai_mah');
+insert into m_village_mapper values('','mhroraur','','mhroraur_kan','','','','','10.10.248.140','echaur','echaur_kan');
+insert into m_village_mapper values('','mhrorpar','','mhrorpar_pal','','','','','10.10.248.140','echpar','echpar_pal');
+insert into m_village_mapper values('','mhrorpar','','mhrorpar_pur','','','','','10.10.248.140','echpar','echpar_pur');
+insert into m_village_mapper values('','mhroraur','','mhroraur_khu','','','','','10.10.248.140','echaur','echaur_khu');
+insert into m_village_mapper values('','mhroraur','','mhroraur_pai','','','','','10.10.248.140','echaur','echaur_pai');
+insert into m_village_mapper values('','mhrorpun','','mhrorpun_pun','','','','','10.10.248.194','echpun','echpun_pun');
+insert into m_village_mapper values('','mhrorcha','','mhrorcha_jiv','','','','','10.10.248.194','echcha','echcha_jiv');
+insert into m_village_mapper values('','mhroraur','','mhroraur_vai','','','','','10.10.248.140','echaur','echaur_vai');
+insert into m_village_mapper values('','mhroraur','','mhroraur_phu','','','','','10.10.248.140','echaur','echaur_phu');
+insert into m_village_mapper values('','mhrorcha','','mhrorcha_war','','','','','10.10.248.194','echcha','echcha_war');
+insert into m_village_mapper values('','mhrorpar','','mhrorpar_sel','','','','','10.10.248.140','echpar','echpar_sel');
+insert into m_village_mapper values('','mhrorpar','','mhrorpar_son','','','','','10.10.248.140','echpar','echpar_son');
+insert into m_village_mapper values('','mhrorjag','','mhrorjag_jal','','','','','10.10.248.194','echjag','echjag_jal');
+insert into m_village_mapper values('','mhrortha','','mhrortha_tha','','','','','10.10.248.140','echtha','echtha_tha');
+
+
+
+
+update m_village_mapper set ech_host='10.10.248.195' where ech_db_name in
+('echamr','echyav','echbul','echako','echwas','echsol','echsat','echsan','echkol','echpun')
+
+
+
+select * from m_village_mapper where ech_db_name in
+('echamr','echyav','echbul','echako','echwas','echsol','echsat','echsan','echkol','echpun')
+order by ech_db_name,ech_schema_name
+
+
+select *  from m_village_mapper where m_village_mapper.ech_host='10.10.248.194' order by ech_db_name,ech_schema_name
+
+
+select * from m_village_mapper where m_village_mapper.ech_schema_name='echtha_ulh'
+
+select * from m_village_mapper order by ech_db_name,ech_schema_name
+
+delete from m_village_mapper where village_code='2' and ccode='272100134213400400' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+delete from m_village_mapper where village_code='5' and ccode='272100134213400200' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+delete from m_village_mapper where village_code='8' and ccode='272100134213400300' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+delete from m_village_mapper where village_code='7' and ccode='272100134213400500' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+delete from m_village_mapper where village_code='6' and ccode='272100134213400700' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+delete from m_village_mapper where village_code='3' and ccode='272100134213400100' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+delete from m_village_mapper where village_code='1' and ccode='272100134213400900' and ech_host='10.10.248.140' and ech_schema_name='echtha_ulh';
+
+
+
+
+
+select * from m_village_mapper where ech_schema_name 
+not in
+('echahm_nag','echahm_ako','echahm_kar','echahm_kop','echahm_jam','echahm_nev','echahm_pat','echahm_par','echahm_rat','echahm_rah','echahm_she','echahm_shg','echahm_shr','echahm_san','echjag_jal','echjag_cha','echjag_bha','echjag_pac','echjag_jam','echjag_par','echjag_era','echjag_dha','echjag_bhu','echjag_muk','echjag_ama','echjag_cho','echjag_yav','echjag_rav','echjag_bod','echnad_nad','echnad_akl','echnad_akr','echnad_tal','echnad_nav','echnad_shd','echdhu_dhu','echdhu_shi','echdhu_sak','echdhu_shk','echnas_nas','echnas_bag','echnas_sur','echnas_mal','echnas_dev','echnas_pet','echnas_din','echnas_cha','echnas_nan','echnas_nip','echnas_yev','echnas_iga','echnas_sin','echnas_kal','echnas_tri','echnag_urb','echnag_rul','echnag_sav','echnag_kal','echnag_nar','echnag_kat','echnag_par','echnag_ram','echnag_hin','echnag_mau','echnag_kam','echnag_umr','echnag_bhi','echnag_kuh','echcha_cha','echcha_War','echcha_bha','echcha_chi','echcha_nag','echcha_bra','echcha_sin','echcha_mul','echcha_gon','echcha_pom','echcha_sao','echcha_raj','echcha_kor','echcha_jiv','echcha_bal','echgad_gad','echgad_cha','echgad_ahe','echgad_arm','echgad_sir','echgad_eta','echgad_kor','echgad_kur','echgad_dha','echgad_wad','echgad_bha','echgad_mul','echwar_war','echwar_arv','echwar_ash','echwar_sel','echwar_sam','echwar_kar','echwar_deo','echwar_hin','echgon_gon','echgon_mor','echgon_amg','echgon_deo','echgon_sad','echgon_tir','echgon_sal','echgon_gor','echbha_bha','echbha_sako','echbha_tum','echbha_pau','echbha_moh','echbha_lakn','echbha_lakh')
+and ech_host='10.10.248.194'
+
+
+db not created
+"10.10.248.149"	"mhrorjag"	"3"	"mhrorjag_jai"	"7"	"नागझरी"	"47"	"270300070022040000"	"10.10.248.194"	"echjag"	"echjag_jai"
+

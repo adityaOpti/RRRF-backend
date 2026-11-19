@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+		function submit() {
+			setTimeout(() => document.getElementById('payForm').submit(), 5000);
+			
+		}
+	</script>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+	<style>
+			body {
+		  overflow: hidden;
+		}
+		
+		.container {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 100vh;
+		  overflow: hidden;
+		  animation-delay: 1s;
+		}
+		
+		.item-1 {
+		  width: 20px;
+		  height: 20px;
+		  background: #f583a1;
+		  border-radius: 50%;
+		  background-color: #eed968;
+		  margin: 7px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		@keyframes scale {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50%,
+		    75% {
+		    transform: scale(2.5);
+		  }
+		  78%, 100% {
+		    opacity: 0;
+		  }
+		}
+		.item-1:before {
+		  content: '';
+		  width: 20px;
+		  height: 20px;
+		  border-radius: 50%;
+		  background-color: #eed968;
+		  opacity: 0.7;
+		  animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+		  animation-delay: 200ms;
+		  transition: 0.5s all ease;
+		  transform: scale(1);
+		}
+		
+		.item-2 {
+		  width: 20px;
+		  height: 20px;
+		  background: #f583a1;
+		  border-radius: 50%;
+		  background-color: #eece68;
+		  margin: 7px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		@keyframes scale {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50%,
+		    75% {
+		    transform: scale(2.5);
+		  }
+		  78%, 100% {
+		    opacity: 0;
+		  }
+		}
+		.item-2:before {
+		  content: '';
+		  width: 20px;
+		  height: 20px;
+		  border-radius: 50%;
+		  background-color: #eece68;
+		  opacity: 0.7;
+		  animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+		  animation-delay: 400ms;
+		  transition: 0.5s all ease;
+		  transform: scale(1);
+		}
+		
+		.item-3 {
+		  width: 20px;
+		  height: 20px;
+		  background: #f583a1;
+		  border-radius: 50%;
+		  background-color: #eec368;
+		  margin: 7px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		@keyframes scale {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50%,
+		    75% {
+		    transform: scale(2.5);
+		  }
+		  78%, 100% {
+		    opacity: 0;
+		  }
+		}
+		.item-3:before {
+		  content: '';
+		  width: 20px;
+		  height: 20px;
+		  border-radius: 50%;
+		  background-color: #eec368;
+		  opacity: 0.7;
+		  animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+		  animation-delay: 600ms;
+		  transition: 0.5s all ease;
+		  transform: scale(1);
+		}
+		
+		.item-4 {
+		  width: 20px;
+		  height: 20px;
+		  background: #f583a1;
+		  border-radius: 50%;
+		  background-color: #eead68;
+		  margin: 7px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		@keyframes scale {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50%,
+		    75% {
+		    transform: scale(2.5);
+		  }
+		  78%, 100% {
+		    opacity: 0;
+		  }
+		}
+		.item-4:before {
+		  content: '';
+		  width: 20px;
+		  height: 20px;
+		  border-radius: 50%;
+		  background-color: #eead68;
+		  opacity: 0.7;
+		  animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+		  animation-delay: 800ms;
+		  transition: 0.5s all ease;
+		  transform: scale(1);
+		}
+		
+		.item-5 {
+		  width: 20px;
+		  height: 20px;
+		  background: #f583a1;
+		  border-radius: 50%;
+		  background-color: #ee8c68;
+		  margin: 7px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		@keyframes scale {
+		  0% {
+		    transform: scale(1);
+		  }
+		  50%,
+		    75% {
+		    transform: scale(2.5);
+		  }
+		  78%, 100% {
+		    opacity: 0;
+		  }
+		}
+		.item-5:before {
+		  content: '';
+		  width: 20px;
+		  height: 20px;
+		  border-radius: 50%;
+		  background-color: #ee8c68;
+		  opacity: 0.7;
+		  animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+		  animation-delay: 1000ms;
+		  transition: 0.5s all ease;
+		  transform: scale(1);
+		}
+   </style>
+</head>
+	
+	<body onload="submit()">
+		<form id="payForm" th:action="@{http://203.197.32.26/echallan/challan/views/frmgrnfordept.php}" method="post">
+			
+<!-- 			<Loader> -->
+			<div class="container">
+			  <div class="item-1"></div>
+			  <div class="item-2"></div>
+			  <div class="item-3"></div>
+			  <div class="item-4"></div>
+			  <div class="item-5"></div>
+			</div>
+<!-- 			</Loader> -->
+			
+				<input type="hidden" name="SUB_SYSTEM" id="SUB_SYSTEM" value="TEST_SUB_SYSTEM" size="35" maxlength="25" >
+				<input type="hidden" name="DEPT_CODE" id="DEPT_CODE" value="TDE" size="35" maxlength="14" >
+				<input type="hidden" name="PAYMENT_TYPE" id="PAYMENT_TYPE" value="01" size="35" maxlength="14" >
+				<input type="hidden" name="TREASURY_CODE" id="TREASURY_CODE" value="9901" size="35" maxlength="14" > 
+				<input type="hidden" name="OFFICE_CODE" id="OFFICE_CODE" value="TDE000" size="35" maxlength="14" > 
+				<input type="hidden" name="REC_FIN_YEAR" id="REC_FIN_YEAR" value="2022-2023" size="35" maxlength="14" > 
+				<input type="hidden" name="PERIOD" id="PERIOD" value="A" size="35" maxlength="14" > 
+				<input type="hidden" name="FROM_DATE" id="FROM_DATE" value="18/05/2022" size="35" maxlength="14" > 
+				<input type="hidden" name="TO_DATE" id="TO_DATE" value="31/03/2099" size="35" maxlength="14" > 
+				<input type="hidden" name="MAJOR_HEAD" id="MAJOR_HEAD" value="9999" size="35" maxlength="14" > 
+				<input type="hidden" name="HOA1" id="HOA1" value="9999999999-01" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT1" id="AMOUNT1" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA2" id="HOA2" value="9999999999-02" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT2" id="AMOUNT2" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA3" id="HOA3" value="9999999999-03" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT3" id="AMOUNT3" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA4" id="HOA4" value="9999999999-04" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT4" id="AMOUNT4" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA5" id="HOA5" value="9999999999-05" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT5" id="AMOUNT5" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA6" id="HOA6" value="9999999999-06" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT6" id="AMOUNT6" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA7" id="HOA7" value="9999999999-07" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT7" id="AMOUNT7" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA8" id="HOA8" value="9999999999-08" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT8" id="AMOUNT8" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="HOA9" id="HOA9" value="9999999999-09" size="35" maxlength="20" > 
+				<input type="hidden" name="AMOUNT9" id="AMOUNT9" value="1" size="35" maxlength="10"  > 
+				<input type="hidden" name="CHALLAN_AMOUNT" id="CHALLAN_AMOUNT" value="9.00" size="35" maxlength="14" > 
+				<input type="hidden" name="TAX_ID" id="TAX_ID" value="tin123" size="35" maxlength="14" > 
+				<input type="hidden" name="PAN_NO" id="PAN_NO" value="ADDPN1233E" size="35" maxlength="14" > 
+				<input type="hidden" name="PARTY_NAME" id="PARTY_NAME" value="vishal naldurgkar" size="35" maxlength="14" > 
+				<input type="hidden" name="ADDRESS1" id="ADDRESS1" value="block no 1 premises vibhav" size="35" maxlength="14" > 
+				<input type="hidden" name="ADDRESS2" id="ADDRESS2" value="karve road" size="35" maxlength="14" > 
+				<input type="hidden" name="ADDRESS3" id="ADDRESS3" value="kothrud" size="35" maxlength="14" > 
+				<input type="hidden" name="PIN_NO" id="PIN_NO" value="411038" size="35" maxlength="14" > 
+				<input type="hidden" name="MOBILE_NO" id="MOBILE_NO" value="" size="35" maxlength="14" > 
+				<input type="hidden" name="DEPARTMENT_ID" id="DEPARTMENT_ID" value="63766878299185437761" size="35" maxlength="30" > 
+				<input type="hidden" name="FORM_ID" id="FORM_ID" value="36A" size="35" > 
+				<input type="hidden" name="REMARKS" id="REMARKS" value="pusepose of challan" size="35" maxlength="14" > 
+				
+		</form>
+	</body>
+</html>

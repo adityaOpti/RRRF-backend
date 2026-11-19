@@ -1,0 +1,50 @@
+forms:-
+OTE =done 
+1   =done
+1a  =done
+1b  =done
+1d  =done
+1e  =done
+2   =done
+3   =done
+6b  =done
+6d  =done
+7a  =done
+7b  =done
+8B  =generate 
+8c  =done
+14  =done
+15  =done
+17  =done
+18  =done
+19  =done
+21  =done
+1ab =done
+
+
+
+multidb content:-
+@Repository
+String fHost,String fDbName,String fSchemaName,String fUser,String fPassword,
+String eHost,String eDbName,String eSchemaName,String eUser,String ePassword,
+
+@Service
+@Autowired
+private DataSourceKeeper dataSourceKeeper;
+
+dataSourceKeeper.setDataSourceEchwadi(request.getHeader("echDbName"),request.getHeader("echSchemaName"));
+DatabaseContextHolder.restoreCtx();
+
+request.getHeader("mhrHost"),request.getHeader("mhrDbName"),request.getHeader("mhrSchemaName"),CommonConstants.mhrorUser,CommonConstants.mhrorPassword,
+request.getHeader("echHost"),request.getHeader("echDbName"),request.getHeader("echSchemaName"),CommonConstants.echUser,CommonConstants.echPassword,
+
+HttpServletRequest request,
+request,
+
+@Controller
+HttpServletRequest request,
+request,
+
+query:-
+' dbname='||?2||' host='||?1||' user='||?4||' password='||?5, 
+' dbname='||?7||' host='||?6||' user='||?9||' password='||?10, 

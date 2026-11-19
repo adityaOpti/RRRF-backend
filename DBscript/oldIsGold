@@ -1,0 +1,647 @@
+	//	List<AdditionalLandRevenue> additionalLandRevenue =new ArrayList<AdditionalLandRevenue>();
+	//	additionalLandRevenue=additionalLandRevenueRepository.findBycCodeAndRevenueYearAndActiveFlagAndApplicableForDemand(landRevenueDemandDao.getCCode(),landRevenueDemandDao.getRevenueYear(), 'Y', 'Y');
+	//	landRevenueDemandDao.setAdditionalLandRevenue(additionalLandRevenue);
+
+
+	//	@Override
+	//	public Response getform3surveyno(String cCode,String revenueYear,HttpServletRequest request,Locale locale) {
+	//		List<Object[]> list = landRevenueDemandRepository.getform3surveyno(cCode,revenueYear,locale);
+	//		if(list.isEmpty()) {
+	//			throw new ResourceNotFoundException("error.form.notfound",messageSource,locale);
+	//		}else {
+	//			Response response =new Response();
+	//			response.setForm3SrNo(list.stream().map((object) ->{
+	//				Form3SrNoDao form3SrNoDao=new Form3SrNoDao();
+	//				form3SrNoDao.setKhataNo(object[0].toString());
+	//				form3SrNoDao.setKhatedarNames(object[1].toString());
+	//				form3SrNoDao.setArea(BigDecimal.valueOf(Double.valueOf(object[2].toString())));
+	//				form3SrNoDao.setDumalaAssessment(BigDecimal.valueOf(Double.valueOf(object[3].toString())));
+	//				form3SrNoDao.setPin(object[4].toString());
+	//				form3SrNoDao.setUnit(object[5].toString());
+	//				return form3SrNoDao;
+	//			}).collect(Collectors.toList()));
+	//
+	//			return response;
+	//		}
+	//	}
+	//
+	//	@Override
+	//	public Response getform2surveyno(String cCode, String revenueYear, HttpServletRequest request,Locale locale) {
+	//		List<Object[]> list = landRevenueDemandRepository.getform2surveyno(cCode,revenueYear,locale);
+	//		if(list.isEmpty()) {
+	//			throw new ResourceNotFoundException("error.form.notfound",messageSource,locale);
+	//		}else {
+	//			Response response =new Response();
+	//			response.setForm2SrNoData(list.stream().map((object) ->{
+	//				Form2SrNoDao form2SrNoDao=new Form2SrNoDao();
+	//				form2SrNoDao.setKhataNo(object[0].toString());
+	//				form2SrNoDao.setKhatedarNames(object[1].toString());
+	//				form2SrNoDao.setArea(BigDecimal.valueOf(Double.valueOf(object[2].toString())));
+	//				form2SrNoDao.setAkrushikAssessment(BigDecimal.valueOf(Double.valueOf(object[3].toString())));
+	//				form2SrNoDao.setPin(object[4].toString());
+	//				form2SrNoDao.setUnit(object[5].toString());
+	//				return form2SrNoDao;
+	//			}).collect(Collectors.toList()));
+	//
+	//			return response;
+	//		}
+	//	}
+//	@Override
+//	public List<LandRevenueDemandDao> getForm8BData(String revenueYear,Integer districtCode,Integer talukaCode,String cCode,Locale locale ) {		
+////		List<Object[]>form8BDtl=landRevenueDemandRepository.getForm8B(revenueYear,cCode);
+//		if(form8BDtl !=null) {
+////			List<LandRevenueDemandDao> lstForm8B = form8BDtl.stream().map((object) -> {
+////				
+////				LandRevenueDemandDao lRDemandDao=new LandRevenueDemandDao();
+////				
+////				lRDemandDao.setKhataNo(object[0].toString());
+////				lRDemandDao.setKhataOwnerName(object[1].toString());
+////				lRDemandDao.setJmBindumala(BigDecimal.valueOf(Double.valueOf(object[2].toString())));
+////				lRDemandDao.setZpBindumala(BigDecimal.valueOf(Double.valueOf(object[3].toString())));
+////				lRDemandDao.setGpBindumala(BigDecimal.valueOf(Double.valueOf(object[4].toString())));
+////				lRDemandDao.setJmDumala(BigDecimal.valueOf(Double.valueOf(object[5].toString())));
+////				lRDemandDao.setZpDumala(BigDecimal.valueOf(Double.valueOf(object[6].toString())));
+////				lRDemandDao.setGpDumala(BigDecimal.valueOf(Double.valueOf(object[7].toString())));
+////				lRDemandDao.setJmVajasut(BigDecimal.valueOf(Double.valueOf(object[8].toString())));
+////				lRDemandDao.setZpVajasut(BigDecimal.valueOf(Double.valueOf(object[9].toString())));
+////				lRDemandDao.setGpVajasut(BigDecimal.valueOf(Double.valueOf(object[10].toString())));
+////				lRDemandDao.setJmAkrushik(BigDecimal.valueOf(Double.valueOf(object[11].toString())));
+////				lRDemandDao.setZpAkrushik(BigDecimal.valueOf(Double.valueOf(object[12].toString())));
+////				lRDemandDao.setGpAkrushik(BigDecimal.valueOf(Double.valueOf(object[13].toString())));
+////				lRDemandDao.setPreYearPendingJm(BigDecimal.valueOf(Double.valueOf(object[22].toString())));
+////				lRDemandDao.setPreYearPendingZp(BigDecimal.valueOf(Double.valueOf(object[23].toString())));
+////				lRDemandDao.setPreYearPendingGp(BigDecimal.valueOf(Double.valueOf(object[24].toString())));
+////				lRDemandDao.setPreYearPendingAddlLandRevenue(BigDecimal.valueOf(Double.valueOf(object[25].toString())));
+////				lRDemandDao.setPreYearPendingEducationalCess(BigDecimal.valueOf(Double.valueOf(object[26].toString())));
+////				lRDemandDao.setPreYearPendingAddlEducationalCess(BigDecimal.valueOf(Double.valueOf(object[27].toString())));
+////				lRDemandDao.setPreYearPendingEmployeeGuaranteeScheme(BigDecimal.valueOf(Double.valueOf(object[28].toString())));
+////				lRDemandDao.setMiscellaneousAmount(BigDecimal.valueOf(Double.valueOf(object[29].toString())));
+////				lRDemandDao.setZpSankirn(BigDecimal.valueOf(Double.valueOf(object[14].toString() == null ? null : object[14].toString())));
+////				lRDemandDao.setJmSankirn(BigDecimal.valueOf(Double.valueOf(object[15].toString()== null ? null : object[15].toString())));
+////				lRDemandDao.setGpSankirn(BigDecimal.ZERO);
+////				lRDemandDao.setAddlLandRevenue(BigDecimal.valueOf(Double.valueOf(object[16].toString())));
+////				lRDemandDao.setEducationalCess(BigDecimal.valueOf(Double.valueOf(object[17].toString())));
+////				lRDemandDao.setAddlEducationalCess(BigDecimal.valueOf(Double.valueOf(object[18].toString())));
+////				lRDemandDao.setEmployeeGuaranteeScheme(BigDecimal.valueOf(Double.valueOf(object[19].toString())));
+////				lRDemandDao.setNetAmountReceived(object[21].toString());
+////				lRDemandDao.setReceiptNo(object[20].toString());
+////				return lRDemandDao;
+////				}). collect(Collectors.toList());
+////			return lstForm8B;
+////			}
+////			return null;
+////		}
+//}	
+
+//	boolean isDuplicates(String cCode,String revenueYear,String khataNo,Character activeFlag,Long demandId,Long form17Id){
+//	  if(demandId != null && landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveForm17IdIsNull(cCode,revenueYear,khataNo,'Y').isPresent())
+//	  {
+//		return true;
+//	  }
+//	  else if(form17Id != null && landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveForm17IdIsNull(cCode,revenueYear,khataNo,'Y').isPresent()) 
+//	  {
+//		return true;
+//	  }
+//	return false;
+//	}
+//else if(landRevenueDemandDao.getModeOfPayment()!=null && landRevenueDemandDao.getModeOfPayment().equals("Cheque")) {
+//	landRevenueDemand.setChequeName(landRevenueDemandDao.getChequeName());
+//	landRevenueDemand.setChequeBranch(landRevenueDemandDao.getChequeBranch());
+//	landRevenueDemand.setChequeDate(landRevenueDemandDao.getChequeDate());
+//	landRevenueDemand.setChequeNumber(landRevenueDemandDao.getChequeNumber());
+//	if(landRevenueDemandDao.getLandReceiveForm17Id() != null) {
+//		landRevenueDemand.setChequeAmount((landRevenueDemandDao.getChequeAmount()
+//				                          .add(landRevenueDemandDao.getAmountOfALiable())
+//			                          	  .add(landRevenueDemandDao.getAmountOfBLiable())).setScale(0,BigDecimal.ROUND_HALF_UP));
+//	}else {
+//		landRevenueDemand.setChequeAmount(landRevenueDemandDao.getChequeAmount());
+//	}
+//	landRevenueDemand.setModeOfPayment("Cheque");
+//}
+
+//@Override
+//public LandRevenueDemandDao persistLandRevenueDemand(LandRevenueDemandDao landRevenueDemandDao) {
+//	    List<LandRevenueDemandDao> finalList = null;
+//		if(landRevenueDemandDao != null && landRevenueDemandDao.getCCode() != null) {
+//			
+//			List<LandRevenueDemandDao> lstLRBindumala = getBinDumalaDetails(landRevenueDemandDao); // Get Bindumala Land records
+//			List<LandRevenueDemandDao> lstLRDumala = getDumalaDetails(landRevenueDemandDao); // Get dumala Land records
+//			List<LandRevenueDemandDao> lstLRAkrushik = getAkrushak(landRevenueDemandDao); // Get AKRUSHIK Land records
+//			List<LandRevenueDemandDao> lstLRSankirn = getSankirn(landRevenueDemandDao.getCCode()); // Get Sankirn Land records
+//			
+//			//Get crop code and price details
+//			List<CropEduCess> lstCropCode = cropEduCessRepository.findAllByActiveFlag('Y');
+//			Map<Integer, Double> mpCropCode = lstCropCode.stream().collect(Collectors.toMap(CropEduCess::getCropCode, CropEduCess::getCropPricePerHect));
+//			
+//			List<Object[]> lstLRForEduCessConstIrr = landRevenueDemandRepository.getLRForEducationalCess(landRevenueDemandDao.getCCode(), 2021);
+//			List<Object[]> lstLRForEduCessConstUnIrr = landRevenueDemandRepository.getLRForEducationalCessConstUnIrr(landRevenueDemandDao.getCCode(), 2021);
+//			
+//			List<Object[]> lstLRForEduCessPureIrr = landRevenueDemandRepository.getLRForEducationalCessPureIrr(landRevenueDemandDao.getCCode(), 2021);
+//			List<Object[]> lstLRForEduCessPureUnIrr = landRevenueDemandRepository.getLRForEducationalCessPureUnIrr(landRevenueDemandDao.getCCode(), 2021);
+//			
+//			//EGS
+//			List<LandRevenueDemandDao> lstLRForEGS = getEmployeeGuaranteeScheme(landRevenueDemandDao);
+//			
+//			List<LandRevenueDemandDao> lstLREducationCessConstIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessConstIrr, mpCropCode); // Get Educational Cess Land records Const Irr
+//			List<LandRevenueDemandDao> lstLREducationCessConstUnIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessConstUnIrr, mpCropCode); // Get Educational Cess Land records Const UnIrr
+//			List<LandRevenueDemandDao> lstLREducationCessPureIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessPureIrr, mpCropCode); // Get Educational Cess Land records Pure Irr
+//			List<LandRevenueDemandDao> lstLREducationCessPureUnIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessPureUnIrr, mpCropCode); // Get Educational Cess Land records Pure UnIrr
+//			
+//			finalList = new ArrayList<>();
+//			finalList.addAll(lstLRBindumala);
+//			finalList.addAll(lstLRDumala);
+//			finalList.addAll(lstLRAkrushik);
+//			finalList.addAll(lstLRSankirn);
+//			finalList.addAll(lstLREducationCessConstIrr);
+//			finalList.addAll(lstLREducationCessConstUnIrr);
+//			finalList.addAll(lstLREducationCessPureIrr);
+//			finalList.addAll(lstLREducationCessPureUnIrr);
+//			finalList.addAll(lstLRForEGS);
+//			
+//			
+//			finalList = mergeList(finalList);
+//			List<LandRevenueDemand> lrDemandEntity = new ArrayList<LandRevenueDemand>();
+//			
+//			if(finalList != null ) {
+//				for(LandRevenueDemandDao lrDemandDao: finalList) {
+//					
+//					LandRevenueDemand landRevenueDemand = new LandRevenueDemand();
+//					
+//					//BeanUtils.copyProperties(landRevenueDemand, lrDemandDao);
+//					landRevenueDemand.setActiveFlag(lrDemandDao.getActiveFlag());
+//					landRevenueDemand.setDistrictCode(lrDemandDao.getDistrictCode());
+//					landRevenueDemand.setTalukaCode(lrDemandDao.getTalukaCode());
+//					landRevenueDemand.setCCode(lrDemandDao.getCCode());
+//					landRevenueDemand.setRevenueYear(lrDemandDao.getRevenueYear());
+//					landRevenueDemand.setKhataNo(lrDemandDao.getKhataNo());
+//					landRevenueDemand.setKhataOwnerName(lrDemandDao.getKhataOwnerName());
+//					landRevenueDemand.setJmBindumala(lrDemandDao.getJmBindumala());
+//					landRevenueDemand.setZpBindumala(lrDemandDao.getZpBindumala());
+//					landRevenueDemand.setGpBindumala(lrDemandDao.getGpBindumala());
+//					landRevenueDemand.setJmDumala(lrDemandDao.getJmDumala());
+//					landRevenueDemand.setZpDumala(lrDemandDao.getZpDumala());
+//					landRevenueDemand.setGpDumala(lrDemandDao.getGpDumala());
+//					landRevenueDemand.setJmAkrushik(lrDemandDao.getJmAkrushik());
+//					landRevenueDemand.setZpAkrushik(lrDemandDao.getZpAkrushik());
+//					landRevenueDemand.setGpAkrushik(lrDemandDao.getGpAkrushik());
+//					landRevenueDemand.setAddlLandRevenue(lrDemandDao.getAddlLandRevenue());
+//					landRevenueDemand.setEducationalCess(lrDemandDao.getEducationalCess());
+//					landRevenueDemand.setAddlEducationalCess(lrDemandDao.getAddlEducationalCess());
+//					landRevenueDemand.setEmployeeGuaranteeScheme(lrDemandDao.getEmployeeGuaranteeScheme());
+//					landRevenueDemand.setJmVajasut(lrDemandDao.getJmVajasut());
+//					landRevenueDemand.setZpVajasut(lrDemandDao.getZpVajasut());
+//					landRevenueDemand.setGpVajasut(lrDemandDao.getGpVajasut());
+//					landRevenueDemand.setJmVajasut(lrDemandDao.getJmSankirn());
+//					landRevenueDemand.setZpVajasut(lrDemandDao.getZpSankirn());
+//					landRevenueDemand.setGpVajasut(lrDemandDao.getGpSankirn());
+//					
+//					BigDecimal netAmount = lrDemandDao.getJmBindumala().add(lrDemandDao.getZpBindumala()).add(lrDemandDao.getGpBindumala()).add(lrDemandDao.getJmDumala())
+//							.add(lrDemandDao.getZpDumala()).add( lrDemandDao.getGpDumala()).add(lrDemandDao.getJmAkrushik() ).add( lrDemandDao.getZpAkrushik()).add( lrDemandDao.getGpAkrushik())
+//							.add(lrDemandDao.getEducationalCess()).add(lrDemandDao.getAddlEducationalCess()).add(lrDemandDao.getEmployeeGuaranteeScheme())
+//							 .add(lrDemandDao.getGpSankirn()).add(lrDemandDao.getZpSankirn()).add(lrDemandDao.getJmSankirn());
+//					
+//					landRevenueDemand.setNetAmount(netAmount);
+//					landRevenueDemand.setNetPending(netAmount);
+//					lrDemandEntity.add(landRevenueDemand);
+//				}
+//				landRevenueDemandRepository.saveAll(lrDemandEntity);
+//			}
+//	    } else {
+//	    }
+//		return new ResponseEntity<>("Records persisted in database.", HttpStatus.CREATED);
+//}
+
+
+
+//validation for receipt
+
+//if(!(findByCCodeAndKhataNo(landRevenueDemandDao.getCCode(),landRevenueDemandDao.getRevenueYear(),landRevenueDemandDao.getKhataNo(),'Y'))) {
+//boolean flag=isDuplicates(landRevenueDemandDao.getCCode(),landRevenueDemandDao.getRevenueYear(),landRevenueDemandDao.getKhataNo(),'Y',
+//		landRevenueDemandDao.getLandReceiveDemandId(),landRevenueDemandDao.getLandReceiveForm17Id());
+//if(flag) {
+//}
+//}
+//return new ResponseEntity<>("Receipt Already Exists Against khataNo-"+landRevenueDemandDao.getKhataNo(), HttpStatus.INTERNAL_SERVER_ERROR);
+
+
+//boolean findByCCodeAndKhataNo(String cCode,String revenueYear,String khataNo,Character activeFlag){
+//if(cCode.trim()!= null && khataNo != null && activeFlag != null) {
+//	if((landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveForm17IdIsNull(cCode,revenueYear, khataNo, activeFlag)).isPresent()
+//	&& (landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveDemandIdIsNull(cCode,revenueYear, khataNo, activeFlag).isPresent())) 
+//	{
+//		return true;
+//	}
+//}
+//return false;
+//}
+// 20-05-2022 Ashish Dahale
+//generate calculations
+
+//if(bindumalaJM <=9.00D && bindumalaJM >= 5.00D ) {
+//	obj1.setNetAmount(obj1.getNetAmount().subtract(BigDecimal.valueOf(bindumalaJM)));
+//}
+//
+//BigDecimal  totalAmount= BigDecimal.valueOf(bindumalaJM).
+//		add(obj1.getZpBindumala()).add(obj1.getGpBindumala()).
+//		add(obj1.getJmDumala()).add(obj1.getZpDumala()).add(obj1.getGpDumala()).
+//		add(obj1.getJmAkrushik()).add(obj1.getZpAkrushik()).add(obj1.getGpAkrushik()).
+//		add(obj1.getAddlLandRevenue()).add(obj1.getEducationalCess()).
+//		add(obj1.getAddlEducationalCess()).add(obj1.getEmployeeGuaranteeScheme()).
+//		add(obj1.getGpSankirn()).add(obj1.getZpSankirn()).add(obj1.getJmSankirn()).
+//		add(obj1.getPreYearPendingJm()).add(obj1.getPreYearPendingZp()).add(obj1.getPreYearPendingGp()).
+//		add(obj1.getPreYearPendingAddlLandRevenue()).add(obj1.getPreYearPendingEducationalCess()).
+//		add(obj1.getPreYearPendingAddlEducationalCess()).add(obj1.getPreYearPendingEmployeeGuaranteeScheme()).
+//		add(obj1.getMiscellaneousAmount()).add(obj1.getPreYearNoticeFee()).add(obj1.getPreYearSankirnJmWith()).
+//		add(obj1.getPreYearSankirnJmWithout()).add(obj1.getPreYearPendingNaCess()).
+//		subtract(obj1.getJmVajasut()).subtract(obj1.getZpVajasut()).subtract(obj1.getGpVajasut());
+//
+////System.out.println("netAmount-->"+totalAmount);
+//obj1.setNetAmount(totalAmount);
+//obj1.setNetPending(totalAmount);
+
+//persist calculations
+//Double bindumalaJM= Double.valueOf(String.valueOf(lrDemandDao.getJmBindumala()));
+//if(bindumalaJM <=9.00D && bindumalaJM >= 5.00D ) {
+//	bindumalaJM=0D;
+//}
+//BigDecimal netAmount = BigDecimal.valueOf(bindumalaJM).add(lrDemandDao.getZpBindumala()).add(lrDemandDao.getGpBindumala())
+//		.add(lrDemandDao.getJmDumala()).add(lrDemandDao.getZpDumala()).add( lrDemandDao.getGpDumala())
+//		.add(lrDemandDao.getJmAkrushik()).add(lrDemandDao.getZpAkrushik()).add( lrDemandDao.getGpAkrushik())
+//		.add(lrDemandDao.getEducationalCess()).add(lrDemandDao.getAddlEducationalCess()).add(lrDemandDao.getEmployeeGuaranteeScheme())
+//		.add(lrDemandDao.getAddlLandRevenue()).add(lrDemandDao.getPreYearPendingGp()).add(lrDemandDao.getPreYearPendingJm())
+//		.add(lrDemandDao.getPreYearPendingZp()).add(lrDemandDao.getPreYearPendingAddlEducationalCess()).add(lrDemandDao.getPreYearPendingEducationalCess())
+//		.add(lrDemandDao.getPreYearPendingEmployeeGuaranteeScheme()).add(lrDemandDao.getMiscellaneousAmount())
+//		.add(lrDemandDao.getPreYearPendingAddlLandRevenue())
+//		.add(lrDemandDao.getPreYearPendingNaCess()).add(lrDemandDao.getPreYearNoticeFee())
+//		.add(lrDemandDao.getPreYearSankirnJmWith()).add(lrDemandDao.getPreYearSankirnJmWithout())
+//		.add(lrDemandDao.getGpSankirn()).add(lrDemandDao.getZpSankirn()).add(lrDemandDao.getJmSankirn())
+//		.subtract(lrDemandDao.getJmVajasut()).subtract(lrDemandDao.getZpVajasut()).subtract(lrDemandDao.getGpVajasut());
+//landRevenueDemand.setNetAmount(netAmount); 
+//landRevenueDemand.setNetPending(netAmount);	//	List<AdditionalLandRevenue> additionalLandRevenue =new ArrayList<AdditionalLandRevenue>();
+	//	additionalLandRevenue=additionalLandRevenueRepository.findBycCodeAndRevenueYearAndActiveFlagAndApplicableForDemand(landRevenueDemandDao.getCCode(),landRevenueDemandDao.getRevenueYear(), 'Y', 'Y');
+	//	landRevenueDemandDao.setAdditionalLandRevenue(additionalLandRevenue);
+
+
+	//	@Override
+	//	public Response getform3surveyno(String cCode,String revenueYear,HttpServletRequest request,Locale locale) {
+	//		List<Object[]> list = landRevenueDemandRepository.getform3surveyno(cCode,revenueYear,locale);
+	//		if(list.isEmpty()) {
+	//			throw new ResourceNotFoundException("error.form.notfound",messageSource,locale);
+	//		}else {
+	//			Response response =new Response();
+	//			response.setForm3SrNo(list.stream().map((object) ->{
+	//				Form3SrNoDao form3SrNoDao=new Form3SrNoDao();
+	//				form3SrNoDao.setKhataNo(object[0].toString());
+	//				form3SrNoDao.setKhatedarNames(object[1].toString());
+	//				form3SrNoDao.setArea(BigDecimal.valueOf(Double.valueOf(object[2].toString())));
+	//				form3SrNoDao.setDumalaAssessment(BigDecimal.valueOf(Double.valueOf(object[3].toString())));
+	//				form3SrNoDao.setPin(object[4].toString());
+	//				form3SrNoDao.setUnit(object[5].toString());
+	//				return form3SrNoDao;
+	//			}).collect(Collectors.toList()));
+	//
+	//			return response;
+	//		}
+	//	}
+	//
+	//	@Override
+	//	public Response getform2surveyno(String cCode, String revenueYear, HttpServletRequest request,Locale locale) {
+	//		List<Object[]> list = landRevenueDemandRepository.getform2surveyno(cCode,revenueYear,locale);
+	//		if(list.isEmpty()) {
+	//			throw new ResourceNotFoundException("error.form.notfound",messageSource,locale);
+	//		}else {
+	//			Response response =new Response();
+	//			response.setForm2SrNoData(list.stream().map((object) ->{
+	//				Form2SrNoDao form2SrNoDao=new Form2SrNoDao();
+	//				form2SrNoDao.setKhataNo(object[0].toString());
+	//				form2SrNoDao.setKhatedarNames(object[1].toString());
+	//				form2SrNoDao.setArea(BigDecimal.valueOf(Double.valueOf(object[2].toString())));
+	//				form2SrNoDao.setAkrushikAssessment(BigDecimal.valueOf(Double.valueOf(object[3].toString())));
+	//				form2SrNoDao.setPin(object[4].toString());
+	//				form2SrNoDao.setUnit(object[5].toString());
+	//				return form2SrNoDao;
+	//			}).collect(Collectors.toList()));
+	//
+	//			return response;
+	//		}
+	//	}
+//	@Override
+//	public List<LandRevenueDemandDao> getForm8BData(String revenueYear,Integer districtCode,Integer talukaCode,String cCode,Locale locale ) {		
+////		List<Object[]>form8BDtl=landRevenueDemandRepository.getForm8B(revenueYear,cCode);
+//		if(form8BDtl !=null) {
+////			List<LandRevenueDemandDao> lstForm8B = form8BDtl.stream().map((object) -> {
+////				
+////				LandRevenueDemandDao lRDemandDao=new LandRevenueDemandDao();
+////				
+////				lRDemandDao.setKhataNo(object[0].toString());
+////				lRDemandDao.setKhataOwnerName(object[1].toString());
+////				lRDemandDao.setJmBindumala(BigDecimal.valueOf(Double.valueOf(object[2].toString())));
+////				lRDemandDao.setZpBindumala(BigDecimal.valueOf(Double.valueOf(object[3].toString())));
+////				lRDemandDao.setGpBindumala(BigDecimal.valueOf(Double.valueOf(object[4].toString())));
+////				lRDemandDao.setJmDumala(BigDecimal.valueOf(Double.valueOf(object[5].toString())));
+////				lRDemandDao.setZpDumala(BigDecimal.valueOf(Double.valueOf(object[6].toString())));
+////				lRDemandDao.setGpDumala(BigDecimal.valueOf(Double.valueOf(object[7].toString())));
+////				lRDemandDao.setJmVajasut(BigDecimal.valueOf(Double.valueOf(object[8].toString())));
+////				lRDemandDao.setZpVajasut(BigDecimal.valueOf(Double.valueOf(object[9].toString())));
+////				lRDemandDao.setGpVajasut(BigDecimal.valueOf(Double.valueOf(object[10].toString())));
+////				lRDemandDao.setJmAkrushik(BigDecimal.valueOf(Double.valueOf(object[11].toString())));
+////				lRDemandDao.setZpAkrushik(BigDecimal.valueOf(Double.valueOf(object[12].toString())));
+////				lRDemandDao.setGpAkrushik(BigDecimal.valueOf(Double.valueOf(object[13].toString())));
+////				lRDemandDao.setPreYearPendingJm(BigDecimal.valueOf(Double.valueOf(object[22].toString())));
+////				lRDemandDao.setPreYearPendingZp(BigDecimal.valueOf(Double.valueOf(object[23].toString())));
+////				lRDemandDao.setPreYearPendingGp(BigDecimal.valueOf(Double.valueOf(object[24].toString())));
+////				lRDemandDao.setPreYearPendingAddlLandRevenue(BigDecimal.valueOf(Double.valueOf(object[25].toString())));
+////				lRDemandDao.setPreYearPendingEducationalCess(BigDecimal.valueOf(Double.valueOf(object[26].toString())));
+////				lRDemandDao.setPreYearPendingAddlEducationalCess(BigDecimal.valueOf(Double.valueOf(object[27].toString())));
+////				lRDemandDao.setPreYearPendingEmployeeGuaranteeScheme(BigDecimal.valueOf(Double.valueOf(object[28].toString())));
+////				lRDemandDao.setMiscellaneousAmount(BigDecimal.valueOf(Double.valueOf(object[29].toString())));
+////				lRDemandDao.setZpSankirn(BigDecimal.valueOf(Double.valueOf(object[14].toString() == null ? null : object[14].toString())));
+////				lRDemandDao.setJmSankirn(BigDecimal.valueOf(Double.valueOf(object[15].toString()== null ? null : object[15].toString())));
+////				lRDemandDao.setGpSankirn(BigDecimal.ZERO);
+////				lRDemandDao.setAddlLandRevenue(BigDecimal.valueOf(Double.valueOf(object[16].toString())));
+////				lRDemandDao.setEducationalCess(BigDecimal.valueOf(Double.valueOf(object[17].toString())));
+////				lRDemandDao.setAddlEducationalCess(BigDecimal.valueOf(Double.valueOf(object[18].toString())));
+////				lRDemandDao.setEmployeeGuaranteeScheme(BigDecimal.valueOf(Double.valueOf(object[19].toString())));
+////				lRDemandDao.setNetAmountReceived(object[21].toString());
+////				lRDemandDao.setReceiptNo(object[20].toString());
+////				return lRDemandDao;
+////				}). collect(Collectors.toList());
+////			return lstForm8B;
+////			}
+////			return null;
+////		}
+//}	
+
+//	boolean isDuplicates(String cCode,String revenueYear,String khataNo,Character activeFlag,Long demandId,Long form17Id){
+//	  if(demandId != null && landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveForm17IdIsNull(cCode,revenueYear,khataNo,'Y').isPresent())
+//	  {
+//		return true;
+//	  }
+//	  else if(form17Id != null && landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveForm17IdIsNull(cCode,revenueYear,khataNo,'Y').isPresent()) 
+//	  {
+//		return true;
+//	  }
+//	return false;
+//	}
+//else if(landRevenueDemandDao.getModeOfPayment()!=null && landRevenueDemandDao.getModeOfPayment().equals("Cheque")) {
+//	landRevenueDemand.setChequeName(landRevenueDemandDao.getChequeName());
+//	landRevenueDemand.setChequeBranch(landRevenueDemandDao.getChequeBranch());
+//	landRevenueDemand.setChequeDate(landRevenueDemandDao.getChequeDate());
+//	landRevenueDemand.setChequeNumber(landRevenueDemandDao.getChequeNumber());
+//	if(landRevenueDemandDao.getLandReceiveForm17Id() != null) {
+//		landRevenueDemand.setChequeAmount((landRevenueDemandDao.getChequeAmount()
+//				                          .add(landRevenueDemandDao.getAmountOfALiable())
+//			                          	  .add(landRevenueDemandDao.getAmountOfBLiable())).setScale(0,BigDecimal.ROUND_HALF_UP));
+//	}else {
+//		landRevenueDemand.setChequeAmount(landRevenueDemandDao.getChequeAmount());
+//	}
+//	landRevenueDemand.setModeOfPayment("Cheque");
+//}
+
+//@Override
+//public LandRevenueDemandDao persistLandRevenueDemand(LandRevenueDemandDao landRevenueDemandDao) {
+//	    List<LandRevenueDemandDao> finalList = null;
+//		if(landRevenueDemandDao != null && landRevenueDemandDao.getCCode() != null) {
+//			
+//			List<LandRevenueDemandDao> lstLRBindumala = getBinDumalaDetails(landRevenueDemandDao); // Get Bindumala Land records
+//			List<LandRevenueDemandDao> lstLRDumala = getDumalaDetails(landRevenueDemandDao); // Get dumala Land records
+//			List<LandRevenueDemandDao> lstLRAkrushik = getAkrushak(landRevenueDemandDao); // Get AKRUSHIK Land records
+//			List<LandRevenueDemandDao> lstLRSankirn = getSankirn(landRevenueDemandDao.getCCode()); // Get Sankirn Land records
+//			
+//			//Get crop code and price details
+//			List<CropEduCess> lstCropCode = cropEduCessRepository.findAllByActiveFlag('Y');
+//			Map<Integer, Double> mpCropCode = lstCropCode.stream().collect(Collectors.toMap(CropEduCess::getCropCode, CropEduCess::getCropPricePerHect));
+//			
+//			List<Object[]> lstLRForEduCessConstIrr = landRevenueDemandRepository.getLRForEducationalCess(landRevenueDemandDao.getCCode(), 2021);
+//			List<Object[]> lstLRForEduCessConstUnIrr = landRevenueDemandRepository.getLRForEducationalCessConstUnIrr(landRevenueDemandDao.getCCode(), 2021);
+//			
+//			List<Object[]> lstLRForEduCessPureIrr = landRevenueDemandRepository.getLRForEducationalCessPureIrr(landRevenueDemandDao.getCCode(), 2021);
+//			List<Object[]> lstLRForEduCessPureUnIrr = landRevenueDemandRepository.getLRForEducationalCessPureUnIrr(landRevenueDemandDao.getCCode(), 2021);
+//			
+//			//EGS
+//			List<LandRevenueDemandDao> lstLRForEGS = getEmployeeGuaranteeScheme(landRevenueDemandDao);
+//			
+//			List<LandRevenueDemandDao> lstLREducationCessConstIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessConstIrr, mpCropCode); // Get Educational Cess Land records Const Irr
+//			List<LandRevenueDemandDao> lstLREducationCessConstUnIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessConstUnIrr, mpCropCode); // Get Educational Cess Land records Const UnIrr
+//			List<LandRevenueDemandDao> lstLREducationCessPureIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessPureIrr, mpCropCode); // Get Educational Cess Land records Pure Irr
+//			List<LandRevenueDemandDao> lstLREducationCessPureUnIrr = getEducationCess(landRevenueDemandDao,lstLRForEduCessPureUnIrr, mpCropCode); // Get Educational Cess Land records Pure UnIrr
+//			
+//			finalList = new ArrayList<>();
+//			finalList.addAll(lstLRBindumala);
+//			finalList.addAll(lstLRDumala);
+//			finalList.addAll(lstLRAkrushik);
+//			finalList.addAll(lstLRSankirn);
+//			finalList.addAll(lstLREducationCessConstIrr);
+//			finalList.addAll(lstLREducationCessConstUnIrr);
+//			finalList.addAll(lstLREducationCessPureIrr);
+//			finalList.addAll(lstLREducationCessPureUnIrr);
+//			finalList.addAll(lstLRForEGS);
+//			
+//			
+//			finalList = mergeList(finalList);
+//			List<LandRevenueDemand> lrDemandEntity = new ArrayList<LandRevenueDemand>();
+//			
+//			if(finalList != null ) {
+//				for(LandRevenueDemandDao lrDemandDao: finalList) {
+//					
+//					LandRevenueDemand landRevenueDemand = new LandRevenueDemand();
+//					
+//					//BeanUtils.copyProperties(landRevenueDemand, lrDemandDao);
+//					landRevenueDemand.setActiveFlag(lrDemandDao.getActiveFlag());
+//					landRevenueDemand.setDistrictCode(lrDemandDao.getDistrictCode());
+//					landRevenueDemand.setTalukaCode(lrDemandDao.getTalukaCode());
+//					landRevenueDemand.setCCode(lrDemandDao.getCCode());
+//					landRevenueDemand.setRevenueYear(lrDemandDao.getRevenueYear());
+//					landRevenueDemand.setKhataNo(lrDemandDao.getKhataNo());
+//					landRevenueDemand.setKhataOwnerName(lrDemandDao.getKhataOwnerName());
+//					landRevenueDemand.setJmBindumala(lrDemandDao.getJmBindumala());
+//					landRevenueDemand.setZpBindumala(lrDemandDao.getZpBindumala());
+//					landRevenueDemand.setGpBindumala(lrDemandDao.getGpBindumala());
+//					landRevenueDemand.setJmDumala(lrDemandDao.getJmDumala());
+//					landRevenueDemand.setZpDumala(lrDemandDao.getZpDumala());
+//					landRevenueDemand.setGpDumala(lrDemandDao.getGpDumala());
+//					landRevenueDemand.setJmAkrushik(lrDemandDao.getJmAkrushik());
+//					landRevenueDemand.setZpAkrushik(lrDemandDao.getZpAkrushik());
+//					landRevenueDemand.setGpAkrushik(lrDemandDao.getGpAkrushik());
+//					landRevenueDemand.setAddlLandRevenue(lrDemandDao.getAddlLandRevenue());
+//					landRevenueDemand.setEducationalCess(lrDemandDao.getEducationalCess());
+//					landRevenueDemand.setAddlEducationalCess(lrDemandDao.getAddlEducationalCess());
+//					landRevenueDemand.setEmployeeGuaranteeScheme(lrDemandDao.getEmployeeGuaranteeScheme());
+//					landRevenueDemand.setJmVajasut(lrDemandDao.getJmVajasut());
+//					landRevenueDemand.setZpVajasut(lrDemandDao.getZpVajasut());
+//					landRevenueDemand.setGpVajasut(lrDemandDao.getGpVajasut());
+//					landRevenueDemand.setJmVajasut(lrDemandDao.getJmSankirn());
+//					landRevenueDemand.setZpVajasut(lrDemandDao.getZpSankirn());
+//					landRevenueDemand.setGpVajasut(lrDemandDao.getGpSankirn());
+//					
+//					BigDecimal netAmount = lrDemandDao.getJmBindumala().add(lrDemandDao.getZpBindumala()).add(lrDemandDao.getGpBindumala()).add(lrDemandDao.getJmDumala())
+//							.add(lrDemandDao.getZpDumala()).add( lrDemandDao.getGpDumala()).add(lrDemandDao.getJmAkrushik() ).add( lrDemandDao.getZpAkrushik()).add( lrDemandDao.getGpAkrushik())
+//							.add(lrDemandDao.getEducationalCess()).add(lrDemandDao.getAddlEducationalCess()).add(lrDemandDao.getEmployeeGuaranteeScheme())
+//							 .add(lrDemandDao.getGpSankirn()).add(lrDemandDao.getZpSankirn()).add(lrDemandDao.getJmSankirn());
+//					
+//					landRevenueDemand.setNetAmount(netAmount);
+//					landRevenueDemand.setNetPending(netAmount);
+//					lrDemandEntity.add(landRevenueDemand);
+//				}
+//				landRevenueDemandRepository.saveAll(lrDemandEntity);
+//			}
+//	    } else {
+//	    }
+//		return new ResponseEntity<>("Records persisted in database.", HttpStatus.CREATED);
+//}
+
+
+
+//validation for receipt
+
+//if(!(findByCCodeAndKhataNo(landRevenueDemandDao.getCCode(),landRevenueDemandDao.getRevenueYear(),landRevenueDemandDao.getKhataNo(),'Y'))) {
+//boolean flag=isDuplicates(landRevenueDemandDao.getCCode(),landRevenueDemandDao.getRevenueYear(),landRevenueDemandDao.getKhataNo(),'Y',
+//		landRevenueDemandDao.getLandReceiveDemandId(),landRevenueDemandDao.getLandReceiveForm17Id());
+//if(flag) {
+//}
+//}
+//return new ResponseEntity<>("Receipt Already Exists Against khataNo-"+landRevenueDemandDao.getKhataNo(), HttpStatus.INTERNAL_SERVER_ERROR);
+
+
+//boolean findByCCodeAndKhataNo(String cCode,String revenueYear,String khataNo,Character activeFlag){
+//if(cCode.trim()!= null && khataNo != null && activeFlag != null) {
+//	if((landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveForm17IdIsNull(cCode,revenueYear, khataNo, activeFlag)).isPresent()
+//	&& (landRevenueDemandRepository.findBycCodeAndRevenueYearAndKhataNoAndActiveFlagAndLandReceiveDemandIdIsNull(cCode,revenueYear, khataNo, activeFlag).isPresent())) 
+//	{
+//		return true;
+//	}
+//}
+//return false;
+//}
+// 20-05-2022 Ashish Dahale
+//generate calculations
+
+//if(bindumalaJM <=9.00D && bindumalaJM >= 5.00D ) {
+//	obj1.setNetAmount(obj1.getNetAmount().subtract(BigDecimal.valueOf(bindumalaJM)));
+//}
+//
+//BigDecimal  totalAmount= BigDecimal.valueOf(bindumalaJM).
+//		add(obj1.getZpBindumala()).add(obj1.getGpBindumala()).
+//		add(obj1.getJmDumala()).add(obj1.getZpDumala()).add(obj1.getGpDumala()).
+//		add(obj1.getJmAkrushik()).add(obj1.getZpAkrushik()).add(obj1.getGpAkrushik()).
+//		add(obj1.getAddlLandRevenue()).add(obj1.getEducationalCess()).
+//		add(obj1.getAddlEducationalCess()).add(obj1.getEmployeeGuaranteeScheme()).
+//		add(obj1.getGpSankirn()).add(obj1.getZpSankirn()).add(obj1.getJmSankirn()).
+//		add(obj1.getPreYearPendingJm()).add(obj1.getPreYearPendingZp()).add(obj1.getPreYearPendingGp()).
+//		add(obj1.getPreYearPendingAddlLandRevenue()).add(obj1.getPreYearPendingEducationalCess()).
+//		add(obj1.getPreYearPendingAddlEducationalCess()).add(obj1.getPreYearPendingEmployeeGuaranteeScheme()).
+//		add(obj1.getMiscellaneousAmount()).add(obj1.getPreYearNoticeFee()).add(obj1.getPreYearSankirnJmWith()).
+//		add(obj1.getPreYearSankirnJmWithout()).add(obj1.getPreYearPendingNaCess()).
+//		subtract(obj1.getJmVajasut()).subtract(obj1.getZpVajasut()).subtract(obj1.getGpVajasut());
+//
+////System.out.println("netAmount-->"+totalAmount);
+//obj1.setNetAmount(totalAmount);
+//obj1.setNetPending(totalAmount);
+
+//persist calculations
+//Double bindumalaJM= Double.valueOf(String.valueOf(lrDemandDao.getJmBindumala()));
+//if(bindumalaJM <=9.00D && bindumalaJM >= 5.00D ) {
+//	bindumalaJM=0D;
+//}
+//BigDecimal netAmount = BigDecimal.valueOf(bindumalaJM).add(lrDemandDao.getZpBindumala()).add(lrDemandDao.getGpBindumala())
+//		.add(lrDemandDao.getJmDumala()).add(lrDemandDao.getZpDumala()).add( lrDemandDao.getGpDumala())
+//		.add(lrDemandDao.getJmAkrushik()).add(lrDemandDao.getZpAkrushik()).add( lrDemandDao.getGpAkrushik())
+//		.add(lrDemandDao.getEducationalCess()).add(lrDemandDao.getAddlEducationalCess()).add(lrDemandDao.getEmployeeGuaranteeScheme())
+//		.add(lrDemandDao.getAddlLandRevenue()).add(lrDemandDao.getPreYearPendingGp()).add(lrDemandDao.getPreYearPendingJm())
+//		.add(lrDemandDao.getPreYearPendingZp()).add(lrDemandDao.getPreYearPendingAddlEducationalCess()).add(lrDemandDao.getPreYearPendingEducationalCess())
+//		.add(lrDemandDao.getPreYearPendingEmployeeGuaranteeScheme()).add(lrDemandDao.getMiscellaneousAmount())
+//		.add(lrDemandDao.getPreYearPendingAddlLandRevenue())
+//		.add(lrDemandDao.getPreYearPendingNaCess()).add(lrDemandDao.getPreYearNoticeFee())
+//		.add(lrDemandDao.getPreYearSankirnJmWith()).add(lrDemandDao.getPreYearSankirnJmWithout())
+//		.add(lrDemandDao.getGpSankirn()).add(lrDemandDao.getZpSankirn()).add(lrDemandDao.getJmSankirn())
+//		.subtract(lrDemandDao.getJmVajasut()).subtract(lrDemandDao.getZpVajasut()).subtract(lrDemandDao.getGpVajasut());
+//landRevenueDemand.setNetAmount(netAmount); 
+//landRevenueDemand.setNetPending(netAmount);
+
+
+
+
+//  old impl of khata merge integration
+
+//			if(!kmKhataMergeLst.isEmpty() && !kmKhataMergeDtlLst.isEmpty()) {
+//				List<Object[]> listToRemove = new ArrayList<>();
+//				List<KhataMergeDtl> lstLRBindumalaMergeDtl=lstLandDetails.stream().map(obj1->{
+//					
+//					KhataMergeDtl lrDao=new KhataMergeDtl();
+//					
+//					if(obj1 !=null) {
+//						lrDao=kmKhataMergeDtlLst.stream().filter(kmDtlR -> obj1[0].toString().equals(kmDtlR.getKhataNo())).findFirst().orElse(null);
+//					}
+//					
+//					if(lrDao!=null) {
+//						lrDao.setKhataNo(obj1[0].toString());
+//						lrDao.setKhataOwnerName(obj1[1].toString());
+//						lrDao.setArea(BigDecimal.valueOf(Double.valueOf(obj1[2].toString())));
+//						lrDao.setAssessment(BigDecimal.valueOf(Double.valueOf(obj1[3].toString())).setScale(0,BigDecimal.ROUND_HALF_DOWN));
+//						lrDao.setSurveyHissaNo(obj1[4].toString());
+//						lrDao.setUom(obj1[5].toString());
+//						listToRemove.add(obj1);
+//					}
+//					return lrDao;
+//				}).collect(Collectors.toList());
+
+//				lstLandDetails.removeAll(listToRemove);
+
+//				//System.out.println(lstLRBindumalaMergeDtl.toArray().toString());
+
+//				lstLRBindumalaMerge=lstLRBindumalaMergeDtl.stream().map(r->{
+//					KhataMerge lrDao=new KhataMerge();
+//					lrDao.setArea(BigDecimal.ZERO);
+//					lrDao.setAssessment(BigDecimal.ZERO);
+//					lrDao.setSurveyHissaNo("");
+//					if(r!=null) {
+//					lrDao =kmKhataMergeLst.stream().filter(kmR -> kmR.getId().equals(r.getParentId())).findFirst().orElse(null);
+//					}
+//					if(lrDao != null && r != null) {
+//						lrDao.setArea(lrDao.getArea()!=null ? lrDao.getArea() : BigDecimal.ZERO.add(r.getArea()!=null ? r.getArea() : BigDecimal.ZERO));
+//						lrDao.setAssessment(lrDao.getAssessment()!=null ? lrDao.getAssessment() : BigDecimal.ZERO.add(r.getAssessment()!=null ? r.getAssessment() : BigDecimal.ZERO));
+//						lrDao.setSurveyHissaNo(lrDao.getSurveyHissaNo()!=null ? lrDao.getSurveyHissaNo() : "" +","+ r.getSurveyHissaNo()!=null ? r.getSurveyHissaNo() : "" );
+//						lrDao.setUom(r.getUom()!=null ? r.getUom() : "");
+////						kmKhataMergeLst.remove(kmKhataMergeLst.stream().filter(kmR -> kmR.getId().equals(r.getParentId())).findFirst().orElse(null));
+//					}
+//					return lrDao;
+//				}).collect(Collectors.toList());
+//				
+//				if(!lstLRBindumalaMerge.isEmpty()) {
+//					finalMergeLst=lstLRBindumalaMerge.stream().map(r->{
+//						Object[] objects = new Object[6];
+//							objects[0]=r.getKhataNo();
+//							objects[1]=r.getKhataOwnerName();
+//							objects[2]=r.getArea();
+//							objects[3]=r.getAssessment();
+//							objects[4]=r.getSurveyHissaNo();
+//							objects[5]=r.getUom();
+//						return objects;
+//					}).collect(Collectors.toList());
+//				}
+//			}
+//			
+//			//System.out.println(finalMergeLst.toArray());
+//	
+//		lstLandDetails.addAll(finalMergeLst);
+
+
+
+//lstLRBindumalaMerge=kmKhataMergeDtlLst.stream().map(r->{
+//KhataMerge lrDao=new KhataMerge();
+//	lrDao.setArea(BigDecimal.ZERO);
+//	lrDao.setAssessment(BigDecimal.ZERO);
+//	lrDao.setSurveyHissaNo("");
+//if(r!=null) {
+//	lrDao =kmKhataMergeLst.stream().filter(kmR -> kmR.getId().equals(r.getParentId())).findFirst().orElse(null);
+//}
+//
+//if(lrDao != null && r != null) {
+//	lrDao.setArea(lrDao.getArea().add(r.getArea()));
+//	lrDao.setAssessment(lrDao.getAssessment().add(r.getAssessment()));
+//	lrDao.setSurveyHissaNo(lrDao.getSurveyHissaNo()+","+ r.getSurveyHissaNo());
+//	lrDao.setUom(r.getUom());
+////	kmKhataMergeLst.remove(kmKhataMergeLst.stream().filter(kmR -> kmR.getId().equals(r.getParentId())).findFirst().orElse(null));
+//}
+//return lrDao;
+//}).collect(Collectors.toList());
